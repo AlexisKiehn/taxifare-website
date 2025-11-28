@@ -27,8 +27,9 @@ with st.form(key='params_form'):
 url = 'https://taxifare.lewagon.ai/predict'
 
 if url == 'https://taxifare.lewagon.ai/predict':
+    st.markdown('Maybe you want to use your own API for the prediction, not the one provided by Le Wagon...')
 
-    if submit_button:
+if submit_button:
     # 2. Let's build a dictionary containing the parameters for our API...
     params = {
         "pickup_datetime": f"{pickup_date} {pickup_time}",
@@ -45,7 +46,6 @@ if url == 'https://taxifare.lewagon.ai/predict':
     # 4. Let's retrieve the prediction from the **JSON** returned by the API...
     if response.status_code == 200:
         prediction = response.json().get('fare', 0)
-
         
         st.metric(label="Predicted Fare", value=f"${round(prediction, 2)}")
 
