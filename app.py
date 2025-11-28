@@ -4,7 +4,7 @@ import datetime
 import pandas as pd
 
 '''
-# TaxiFareModel front
+# TaxiFareModel predictor
 '''
 
 with st.form(key='params_form'):
