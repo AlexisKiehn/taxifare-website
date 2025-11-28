@@ -28,7 +28,7 @@ url = 'https://taxifare.lewagon.ai/predict'
 
 if url == 'https://taxifare.lewagon.ai/predict':
 
-if submit_button:
+    if submit_button:
     # 2. Let's build a dictionary containing the parameters for our API...
     params = {
         "pickup_datetime": f"{pickup_date} {pickup_time}",
